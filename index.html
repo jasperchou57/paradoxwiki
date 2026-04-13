@@ -1,0 +1,480 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paradox Roblox Wiki — Codes, Clans, Shikai Guide 2026</title>
+<meta name="description" content="Paradox Roblox Wiki for the Bleach RPG. 15 working codes, clan tier list, Shikai guide, Trello mirror and a free build planner — all verified.">
+<link rel="canonical" href="https://paradoxwiki.net/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paradox Roblox Wiki — Codes, Clans, Shikai Guide 2026">
+<meta property="og:description" content="Paradox Roblox Wiki for the Bleach RPG. 15 working codes, clan tier list, Shikai guide, Trello mirror and a free build planner — all verified.">
+<meta property="og:url" content="https://paradoxwiki.net/">
+<meta property="og:site_name" content="Paradox Wiki">
+<meta property="og:image" content="https://paradoxwiki.net/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_TOKEN"}'></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --bg:#0B0E13;--card:#1A1C2C;--line:#2B2D3C;--text:#E8E8F0;--mute:#8B8E9E;
+    --blue:#5383E8;--gold:#F1B51C;--red:#FF4655;--green:#32D296;
+  }
+  html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:14px;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  .card{background:var(--card);border:1px solid var(--line);}
+  .hline{border-color:var(--line);}
+  .muted{color:var(--mute);}
+  .btn{background:var(--blue);color:#fff;padding:10px 16px;font-weight:600;border-radius:4px;}
+  .btn:hover{filter:brightness(1.1);}
+  .btn-ghost{border:1px solid var(--line);padding:8px 14px;border-radius:4px;}
+  .tag{font-size:11px;padding:2px 8px;border:1px solid var(--line);border-radius:2px;letter-spacing:.04em;text-transform:uppercase;}
+  .tag-live{color:var(--green);border-color:#1f5a43;background:#0f2a20;}
+  .tag-exp{color:var(--red);border-color:#5a1f25;background:#2a0f12;}
+  .tag-tier-s{color:var(--gold);border-color:#5a4a1f;background:#2a220f;}
+  a{color:var(--text);}
+  a:hover{color:var(--blue);}
+  table{width:100%;border-collapse:collapse;}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;}
+  select,input{background:#0B0E13;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:4px;font-family:inherit;font-size:14px;}
+  select:focus,input:focus{outline:none;border-color:var(--blue);}
+  details summary{cursor:pointer;padding:14px 0;border-bottom:1px solid var(--line);list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:'+';float:right;color:var(--mute);}
+  details[open] summary::after{content:'−';}
+  details[open] summary{color:var(--blue);}
+  .kbd{font-family:'JetBrains Mono',monospace;background:#0B0E13;border:1px solid var(--line);padding:2px 6px;border-radius:2px;font-size:12px;}
+  .live-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #5a1f25;background:#2a0f12;color:var(--red);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+  .live-dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+  .search-wrap{position:relative;}
+  .search-wrap input{font-size:15px;padding:14px 16px 14px 42px;width:100%;}
+  .search-wrap svg{position:absolute;left:14px;top:50%;transform:translateY(-50%);color:var(--mute);pointer-events:none;}
+  .suggest-box{position:absolute;top:calc(100% + 4px);left:0;right:0;background:var(--card);border:1px solid var(--line);border-radius:4px;max-height:320px;overflow-y:auto;z-index:50;display:none;}
+  .suggest-box.on{display:block;}
+  .suggest-item{padding:10px 14px;border-bottom:1px solid var(--line);cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:12px;text-decoration:none;color:var(--text);}
+  .suggest-item:last-child{border-bottom:0;}
+  .suggest-item:hover,.suggest-item.active{background:#0f1320;}
+  .suggest-item .cat{font-size:10px;text-transform:uppercase;color:var(--mute);letter-spacing:.06em;}
+  .chip{display:inline-block;padding:6px 12px;border:1px solid var(--line);border-radius:2px;font-size:12px;cursor:pointer;margin-right:6px;margin-top:6px;text-transform:uppercase;letter-spacing:.04em;font-weight:600;}
+  .chip:hover{border-color:var(--blue);color:var(--blue);}
+  .meta-card{position:relative;padding:16px;border:1px solid var(--line);background:var(--card);display:block;}
+  .meta-card:hover{border-color:var(--blue);}
+  .meta-card .rank{position:absolute;top:12px;right:14px;font-family:'JetBrains Mono',monospace;font-size:11px;color:var(--mute);}
+  .meta-card .tier-badge{position:absolute;top:12px;left:14px;}
+  .meta-card h3{margin-top:22px;font-size:16px;font-weight:700;}
+  .meta-card .sub{color:var(--mute);font-size:12px;margin-top:2px;}
+  .meta-card .stats{display:flex;gap:16px;margin:12px 0;font-family:'JetBrains Mono',monospace;font-size:12px;}
+  .meta-card .stats span strong{display:block;font-size:14px;color:var(--text);}
+  .meta-card .stats span{color:var(--mute);}
+  .meta-card .load{display:inline-block;margin-top:6px;font-size:11px;color:var(--blue);text-transform:uppercase;letter-spacing:.05em;font-weight:700;}
+  .discord-cta{background:#1a1c2c;border:1px solid var(--line);border-left:3px solid #5865F2;padding:18px 20px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;}
+  .yt-card{display:block;border:1px solid var(--line);background:var(--card);text-decoration:none;color:var(--text);}
+  .yt-card:hover{border-color:var(--blue);}
+  .yt-thumb{position:relative;display:block;line-height:0;}
+  .yt-thumb img{display:block;width:100%;height:auto;}
+  .yt-thumb::after{content:'WATCH';position:absolute;left:8px;bottom:8px;padding:3px 8px;background:rgba(11,14,19,0.92);border:1px solid var(--line);color:var(--red);font-family:'JetBrains Mono',monospace;font-size:10px;font-weight:700;letter-spacing:.08em;}
+  .yt-meta{padding:10px 12px;border-top:1px solid var(--line);}
+  .yt-title{font-weight:600;font-size:13px;line-height:1.3;}
+  .yt-sub{color:var(--mute);font-size:11px;margin-top:3px;}
+  .inline-img{display:block;border:1px solid var(--line);margin:8px 0;}
+  .inline-img img{display:block;width:100%;height:auto;}
+  .cover-mini{width:40px;height:40px;border:1px solid var(--line);border-radius:2px;}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"VideoGame",
+  "name":"Paradox",
+  "alternateName":["Paradox Bleach","A Bleach Game Paradox"],
+  "url":"https://www.roblox.com/games/paradox",
+  "gamePlatform":"Roblox",
+  "applicationCategory":"Game",
+  "genre":"Action RPG",
+  "author":{"@type":"Organization","name":"a bleach game"},
+  "datePublished":"2026-04-10",
+  "description":"Paradox is an open-world Bleach-inspired action RPG on Roblox with Sekiro-inspired combat. Three races — Soul Reaper, Hollow, and Quincy — each with legendary clans, rare powers, and progression from Shikai to Bankai, Resurrection, and Schrift.",
+  "aggregateRating":{"@type":"AggregateRating","ratingValue":"84.7","bestRating":"100","ratingCount":"39682"}
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What is Paradox on Roblox?","acceptedAnswer":{"@type":"Answer","text":"Paradox is an open-world Bleach-inspired action RPG released on Roblox on April 10, 2026, by the developer a bleach game. It features Sekiro-inspired combat and three playable races: Soul Reaper, Hollow, and Quincy. Each race has legendary clans, rare powers, and distinct progression paths culminating in Bankai, Resurrection, or Schrift."}},
+    {"@type":"Question","name":"How do I redeem codes in Paradox Roblox?","acceptedAnswer":{"@type":"Answer","text":"Click the Gear icon in the top-left of the screen, go to the Code tab, enter a working code, and select Redeem Code. Rerolls and items are added to your inventory. Codes are case-sensitive."}},
+    {"@type":"Question","name":"What are the races in Paradox Roblox?","acceptedAnswer":{"@type":"Answer","text":"Paradox has three races: Soul Reaper (spawns in Soul Society, unlocks Shikai at 200 Potential and Bankai via Vizard progression), Hollow (evolves through Fishbone, Menos Grande, Adjuchas, Vasto Lorde, and Arrancar stages with Resurrection at 605 Potential), and Quincy (spawns in Wandenreich, unlocks Schrift at 215 Potential and Voltstanding later)."}},
+    {"@type":"Question","name":"What is the best clan in Paradox Roblox?","acceptedAnswer":{"@type":"Answer","text":"Legendary clans are the strongest tier in every race. For Soul Reaper: Aizen (+10 HP, +10 Reiatsu, +5 Posture) leads. For Hollow: Cifer (+10 HP, +10 Reiatsu, +4 Posture). For Quincy: Yhwach (+20 HP, +10 Reiatsu). See our clan tier list for the full ranking."}},
+    {"@type":"Question","name":"How do I unlock Shikai in Paradox?","acceptedAnswer":{"@type":"Answer","text":"Reach 200 Potential as a Soul Reaper, press N to meditate, and complete the three-stage Shikai Obtainment quest. Stage 1 is a 1-2-3-4 key sequence, Stage 2 is a circle-based rhythm challenge, and Stage 3 is a boss fight against your Shikai spirit."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://paradoxwiki.net/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="border-b hline">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2">
+      <img src="/assets/img/paradox-game-cover.webp" width="512" height="512" alt="Paradox Roblox Bleach game cover art" class="cover-mini" loading="eager">
+      <span class="mono font-bold text-base tracking-tight">paradoxwiki<span style="color:var(--blue)">.net</span></span>
+    </a>
+    <nav class="flex items-center gap-1 text-sm">
+      <a href="/codes/" class="live-badge" title="15 live codes right now"><span class="live-dot"></span>15 Live Codes</a>
+      <a href="/trello/" class="btn-ghost">Trello</a>
+      <a href="/tier-list/" class="btn-ghost">Tier List</a>
+      <a href="/tools/build-planner/" class="btn-ghost" style="border-color:var(--blue);color:var(--blue)">Build Planner</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-6">
+
+  <section class="mb-6">
+    <h1 class="text-xl font-semibold">Paradox Roblox Wiki <span class="muted font-normal">(A Bleach Game)</span></h1>
+    <p class="muted text-sm mt-1">15 live codes, clan tier list, Shikai and Resurrection guides, and a free build planner. Verified from the official Trello. Game released April 10, 2026.</p>
+  </section>
+
+  <section class="card p-5 mb-6">
+    <div class="flex items-center justify-between mb-3">
+      <span class="text-xs uppercase tracking-wider muted">Search everything</span>
+      <span class="text-xs muted mono">clans · powers · bosses · items · codes</span>
+    </div>
+    <div class="search-wrap">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
+      <input type="search" id="globalSearch" autocomplete="off" placeholder="Search Aizen, Shikai, Starrk, Hogyoku, Wipe Essence...">
+      <div class="suggest-box" id="suggestBox"></div>
+    </div>
+    <div class="mt-4 flex flex-wrap items-center gap-1">
+      <span class="text-xs muted mr-2 uppercase tracking-wider">Or plan a build</span>
+      <a href="/tools/build-planner/?r=SoulReaper" class="chip">Soul Reaper</a>
+      <a href="/tools/build-planner/?r=Hollow" class="chip">Hollow</a>
+      <a href="/tools/build-planner/?r=Quincy" class="chip">Quincy</a>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <div class="flex items-end justify-between mb-2">
+      <h2 class="text-base font-semibold">Live Codes <span class="muted font-normal text-xs ml-2">verified from the official Trello</span></h2>
+      <a href="/codes/" class="text-xs" style="color:var(--blue)">All 15 codes →</a>
+    </div>
+    <div class="card overflow-hidden">
+      <table>
+        <thead>
+          <tr>
+            <th>Code</th>
+            <th>Reward</th>
+            <th>Status</th>
+            <th></th>
+          </tr>
+        </thead>
+        <tbody class="mono text-sm">
+          <tr>
+            <td class="font-semibold">paradoxisout</td>
+            <td>25 Ability / Clan / Weapon Skin Rerolls each</td>
+            <td><span class="tag tag-live">Live</span></td>
+            <td><button class="btn-ghost text-xs" onclick="navigator.clipboard.writeText('paradoxisout')">Copy</button></td>
+          </tr>
+          <tr>
+            <td class="font-semibold">Iblamethetesters</td>
+            <td>30 Ability, 10 Clan, 10 Weapon Skin Rerolls</td>
+            <td><span class="tag tag-live">Live</span></td>
+            <td><button class="btn-ghost text-xs" onclick="navigator.clipboard.writeText('Iblamethetesters')">Copy</button></td>
+          </tr>
+          <tr>
+            <td class="font-semibold">morebugfixes</td>
+            <td>25 Weapon Skin, 15 Shikai, 10 Clan Rerolls</td>
+            <td><span class="tag tag-live">Live</span></td>
+            <td><button class="btn-ghost text-xs" onclick="navigator.clipboard.writeText('morebugfixes')">Copy</button></td>
+          </tr>
+          <tr>
+            <td class="font-semibold">sorry4bugs</td>
+            <td>1 Wipe Essence + 10 All Rerolls</td>
+            <td><span class="tag tag-live">Live</span></td>
+            <td><button class="btn-ghost text-xs" onclick="navigator.clipboard.writeText('sorry4bugs')">Copy</button></td>
+          </tr>
+          <tr>
+            <td class="font-semibold">evenmorebugfixes</td>
+            <td>10 Locked Ability Rerolls, 5 Stat Resets</td>
+            <td><span class="tag tag-live">Live</span></td>
+            <td><button class="btn-ghost text-xs" onclick="navigator.clipboard.writeText('evenmorebugfixes')">Copy</button></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+    <p class="text-xs muted mt-2">Click <a href="/codes/" style="color:var(--blue)">All 15 codes</a> for the full list. Redeem in-game via Gear icon → Code tab → Redeem Code.</p>
+  </section>
+
+  <section class="mb-8">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-base font-semibold">Top Legendary Clans <span class="muted font-normal text-xs ml-2">by race · verified from Trello</span></h2>
+      <a href="/tier-list/" class="text-xs" style="color:var(--blue)">Full tier list →</a>
+    </div>
+    <div class="grid md:grid-cols-3 gap-3">
+
+      <a href="/tools/build-planner/?r=SoulReaper&c=Aizen" class="meta-card">
+        <span class="tag tag-tier-s tier-badge">LEGENDARY</span>
+        <span class="rank">Soul Reaper</span>
+        <h3>Aizen</h3>
+        <div class="sub">The highest-stat Soul Reaper clan</div>
+        <div class="stats">
+          <span>HP <strong>+10</strong></span>
+          <span>Reiatsu <strong>+10</strong></span>
+          <span>Posture <strong>+5</strong></span>
+        </div>
+        <span class="load">Plan an Aizen build →</span>
+      </a>
+
+      <a href="/tools/build-planner/?r=Hollow&c=Cifer" class="meta-card">
+        <span class="tag tag-tier-s tier-badge">LEGENDARY</span>
+        <span class="rank">Hollow</span>
+        <h3>Cifer</h3>
+        <div class="sub">Highest triple-stat Hollow clan</div>
+        <div class="stats">
+          <span>HP <strong>+10</strong></span>
+          <span>Reiatsu <strong>+10</strong></span>
+          <span>Posture <strong>+4</strong></span>
+        </div>
+        <span class="load">Plan a Cifer build →</span>
+      </a>
+
+      <a href="/tools/build-planner/?r=Quincy&c=Yhwach" class="meta-card">
+        <span class="tag tag-tier-s tier-badge">LEGENDARY</span>
+        <span class="rank">Quincy</span>
+        <h3>Yhwach</h3>
+        <div class="sub">Highest raw HP in the game</div>
+        <div class="stats">
+          <span>HP <strong>+20</strong></span>
+          <span>Reiatsu <strong>+10</strong></span>
+          <span>Posture <strong>—</strong></span>
+        </div>
+        <span class="load">Plan a Yhwach build →</span>
+      </a>
+
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <div class="flex items-end justify-between mb-3">
+      <h2 class="text-base font-semibold">Community Video Guides <span class="muted font-normal text-xs ml-2">from top Paradox creators</span></h2>
+      <a href="https://www.youtube.com/results?search_query=roblox+paradox+bleach" class="text-xs" style="color:var(--blue)" target="_blank" rel="noopener">More on YouTube →</a>
+    </div>
+    <div class="grid md:grid-cols-4 gap-3">
+      <a href="https://youtu.be/hJhJj4fjEPc" target="_blank" rel="noopener" class="yt-card">
+        <div class="yt-thumb"><img src="/assets/img/youtube-hollow-progression-mimoblox.webp" width="480" height="360" alt="MimoBlox Paradox Hollow Progression Guide thumbnail" loading="lazy"></div>
+        <div class="yt-meta">
+          <div class="yt-title">FULL Hollow Progression Guide</div>
+          <div class="yt-sub">MimoBlox · 9:28 · 93k views</div>
+        </div>
+      </a>
+      <a href="https://youtu.be/PooWQP-4I4o" target="_blank" rel="noopener" class="yt-card">
+        <div class="yt-thumb"><img src="/assets/img/youtube-soul-reaper-bankai-catt.webp" width="480" height="360" alt="Catt Paradox Soul Reaper to Bankai Guide thumbnail" loading="lazy"></div>
+        <div class="yt-meta">
+          <div class="yt-title">Level 1 to Bankai — Soul Reaper</div>
+          <div class="yt-sub">Catt · 16:08 · 62k views</div>
+        </div>
+      </a>
+      <a href="https://youtu.be/zdcsLkXQUh0" target="_blank" rel="noopener" class="yt-card">
+        <div class="yt-thumb"><img src="/assets/img/youtube-beginner-guide-liftedtio.webp" width="480" height="360" alt="LiftedTIO Paradox beginner guide thumbnail" loading="lazy"></div>
+        <div class="yt-meta">
+          <div class="yt-title">Updated Beginner Guide</div>
+          <div class="yt-sub">LiftedTIO · 20:50</div>
+        </div>
+      </a>
+      <a href="https://youtu.be/vxyLIC0AQig" target="_blank" rel="noopener" class="yt-card">
+        <div class="yt-thumb"><img src="/assets/img/youtube-paradox-peak-hw5567.webp" width="480" height="360" alt="HW5567 Paradox Roblox Bleach game review thumbnail" loading="lazy"></div>
+        <div class="yt-meta">
+          <div class="yt-title">This Bleach Game Might Be Peak</div>
+          <div class="yt-sub">HW5567 · 27:21 · 391k views</div>
+        </div>
+      </a>
+    </div>
+  </section>
+
+  <section class="mb-8 grid md:grid-cols-3 gap-4">
+    <a href="/codes/" class="card p-4 hover:border-blue-500">
+      <div class="text-xs uppercase muted tracking-wider mb-1">Guide</div>
+      <div class="font-semibold mb-1">How to redeem Paradox codes</div>
+      <div class="text-xs muted">Gear icon → Code tab → paste → Redeem Code. Full step-by-step with all 15 working codes.</div>
+    </a>
+    <a href="/trello/" class="card p-4 hover:border-blue-500">
+      <div class="text-xs uppercase muted tracking-wider mb-1">Mirror</div>
+      <div class="font-semibold mb-1">Paradox Trello (searchable)</div>
+      <div class="text-xs muted">345 cards across 26 lists. Faster than the official board, supports cross-list search.</div>
+    </a>
+    <a href="/tools/build-planner/" class="card p-4 hover:border-blue-500">
+      <div class="text-xs uppercase muted tracking-wider mb-1">Tool</div>
+      <div class="font-semibold mb-1">Build Planner</div>
+      <div class="text-xs muted">Pick race, clan, power, and stats. See buffs, stat totals, and share your build via URL.</div>
+    </a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-base font-semibold mb-3">About Paradox Roblox</h2>
+    <div class="card p-5 text-sm leading-relaxed" style="color:#c8cad6">
+      <p class="mb-3">Paradox is an open-world Bleach-inspired action RPG with Sekiro-inspired combat, released on Roblox on April 10, 2026 by the developer "a bleach game." Within 72 hours of launch it crossed 5.4 million visits, 70,000 favorites, and a peak concurrent player count above 28,000 — numbers that put it in the top 1% of new Roblox releases.</p>
+      <p class="mb-3">The game has three playable races, each with a distinct spawn world and progression path. <strong>Soul Reapers</strong> spawn in the Soul Society and progress through a Soul Reaper Exam (at 75 Potential), Shikai obtainment (200 Potential), Vizard, and finally Bankai. <strong>Hollows</strong> start as Fishbone and evolve through Menos Grande, Adjuchas, Vasto Lorde, and optionally rip off their mask at any stage to become an Arrancar — unlocking Resurrection at 605 Potential via the Hogyoku questline. <strong>Quincies</strong> spawn in the Wandenreich and unlock their Schrift at 215 Potential, with Voltstanding as the late-game ceiling.</p>
+      <p class="mb-3">Every race rolls two gacha identities at character creation: a <strong>Clan</strong> (which gives flat HP, Reiatsu, or Posture buffs, tiered as Legendary 1%, Rare 10%, Common 89%) and a <strong>Power</strong> (which determines your ability tree, same rarity distribution). Legendary clans like Aizen, Cifer, and Yhwach stack multiple stat buffs; Common clans give no buffs at all — which is why Clan Rerolls from codes are the most valuable launch-week resource.</p>
+      <p class="mb-3">Combat uses a four-stat system: <strong>Hakuda</strong>, <strong>Kido</strong>, <strong>Speed</strong>, and <strong>Sword</strong>. These stats unlock skills in their respective trees rather than providing direct damage bonuses — stat-stacking is a skill unlock currency, not a damage currency. You can allocate 42 skill points at max Potential (45 with the Holy Grail item), and Stat Resets let you reallocate without wiping your character. Potential caps at 705 for every race.</p>
+      <p>This wiki is a community project. We sync hourly from the official <a href="https://trello.com/b/IkzpkDRy/paradox-information-new" style="color:var(--blue)">Paradox Trello</a> (345 cards, 26 lists) and the official <a href="https://discord.gg/ableachgame" style="color:var(--blue)">Discord</a>. No ads on the build planner, no signup to use any tool, no reskinned AI filler content. If you find something wrong, the Discord link goes straight to our feedback channel.</p>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <a href="https://discord.gg/ableachgame" class="discord-cta">
+      <div>
+        <div class="font-semibold text-base mb-1">Join 166,000 players in the official Paradox Discord</div>
+        <div class="text-xs muted">Pinned codes, patch notes, trading, and LFG. Same source we pull our codes from.</div>
+      </div>
+      <div class="btn">Open Discord →</div>
+    </a>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-base font-semibold mb-3">Frequently Asked Questions</h2>
+    <div class="card p-5">
+      <details>
+        <summary class="font-semibold">What is Paradox on Roblox?</summary>
+        <p class="py-3 muted text-sm">Paradox is an open-world Bleach-inspired action RPG with Sekiro-inspired combat, released on Roblox on April 10, 2026 by "a bleach game." It has three playable races (Soul Reaper, Hollow, Quincy), gacha-style clan and power rolls, and a 705-Potential progression cap culminating in Bankai, Resurrection, or Schrift depending on your race.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">How do I redeem codes in Paradox Roblox?</summary>
+        <p class="py-3 muted text-sm">Click the <strong>Gear icon</strong> in the top-left, go to the <strong>Code</strong> tab, paste a working code from our <a href="/codes/" style="color:var(--blue)">codes page</a>, and select <strong>Redeem Code</strong>. Codes are case-sensitive — use the Copy button to avoid typos.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">What are the three races in Paradox?</summary>
+        <p class="py-3 muted text-sm"><strong>Soul Reaper</strong> — Shikai at 200 Potential, Vizard and Bankai afterwards. Spawns in Soul Society. <strong>Hollow</strong> — evolves through Fishbone → Menos → Adjuchas → Vasto Lorde → Arrancar, Resurrection unlock at 605 Potential. <strong>Quincy</strong> — Schrift at 215 Potential, Voltstanding later. Spawns in Wandenreich.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">What is the best clan in Paradox Roblox?</summary>
+        <p class="py-3 muted text-sm">Legendary clans dominate every race. Soul Reaper: <strong>Aizen</strong> (+10 HP, +10 Reiatsu, +5 Posture). Hollow: <strong>Cifer</strong> (+10 HP, +10 Reiatsu, +4 Posture). Quincy: <strong>Yhwach</strong> (+20 HP, +10 Reiatsu). See the <a href="/tier-list/" style="color:var(--blue)">tier list</a> for full rankings.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">How do I unlock Shikai in Paradox?</summary>
+        <p class="py-3 muted text-sm">Reach 200 Potential as a Soul Reaper, press <span class="kbd">N</span> to meditate, and complete the Shikai Obtainment quest. Stage 1 is a 1-2-3-4 key sequence, Stage 2 is a circle-based rhythm challenge, Stage 3 is a boss fight against your Shikai spirit.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">How do I wipe my character?</summary>
+        <p class="py-3 muted text-sm">Use a <strong>Wipe Essence</strong> item from your inventory. Wipe Essence is granted by the <span class="mono">shutdownadox</span> and <span class="mono">sorry4bugs</span> codes, or you can buy it with in-game resources. Wiping resets your race and progression but preserves unused rerolls and cosmetics.</p>
+      </details>
+      <details>
+        <summary class="font-semibold">Is Paradox related to the DOORS Paradox game?</summary>
+        <p class="py-3 muted text-sm">No. "Paradox (DOORS)" is a separate Roblox horror game inspired by LSPLASH's DOORS. This wiki covers the Bleach-themed RPG only.</p>
+      </details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t hline mt-12">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-3 text-xs muted">
+    <div>paradoxwiki.net · community project · not affiliated with a bleach game or Roblox Corporation.</div>
+    <div class="flex gap-4">
+      <a href="https://discord.gg/ableachgame">Official Discord</a>
+      <a href="/codes/">Codes</a>
+      <a href="/trello/">Trello</a>
+      <a href="/tier-list/">Tier List</a>
+    </div>
+  </div>
+</footer>
+
+<script>
+const INDEX=[
+  {n:'Aizen',c:'Soul Reaper Clan',d:'Legendary · +10 HP +10 Reiatsu +5 Posture',u:'/trello/?q=aizen'},
+  {n:'Kurosaki',c:'Soul Reaper Clan',d:'Legendary · +20 Reiatsu +5 Posture',u:'/trello/?q=kurosaki'},
+  {n:'Unohana',c:'Soul Reaper Clan',d:'Legendary · +15 HP +5 Posture',u:'/trello/?q=unohana'},
+  {n:'Yamamoto',c:'Soul Reaper Clan',d:'Legendary · +15 HP +15 Reiatsu',u:'/trello/?q=yamamoto'},
+  {n:'Zaraki',c:'Soul Reaper Clan',d:'Legendary · +10 HP +5 Posture',u:'/trello/?q=zaraki'},
+  {n:'Kuchiki',c:'Soul Reaper Clan',d:'Rare · +5 HP',u:'/trello/?q=kuchiki'},
+  {n:'Urahara',c:'Soul Reaper Clan',d:'Rare · +8 Reiatsu',u:'/trello/?q=urahara'},
+  {n:'Starrk',c:'Hollow Clan',d:'Legendary · +20 Reiatsu +3 Posture · also an Espada boss',u:'/trello/?q=starrk'},
+  {n:'Cifer',c:'Hollow Clan',d:'Legendary · +10 HP +10 Reiatsu +4 Posture',u:'/trello/?q=cifer'},
+  {n:'Jaegerjaquez',c:'Hollow Clan',d:'Legendary · +15 HP +5 Posture',u:'/trello/?q=jaegerjaquez'},
+  {n:'Halibel',c:'Hollow Clan',d:'Legendary · +15 HP +8 Posture',u:'/trello/?q=halibel'},
+  {n:'Louisenbairn',c:'Hollow Clan',d:'Legendary · +17 Reiatsu +9 HP +3 Posture',u:'/trello/?q=louisenbairn'},
+  {n:'Yhwach',c:'Quincy Clan',d:'Legendary · +20 HP +10 Reiatsu · highest raw HP',u:'/trello/?q=yhwach'},
+  {n:'Ishida',c:'Quincy Clan',d:'Legendary · +15 HP +5 Posture +5 Reiatsu',u:'/trello/?q=ishida'},
+  {n:'Haschwalth',c:'Quincy Clan',d:'Legendary · +15 HP +10 Posture',u:'/trello/?q=haschwalth'},
+  {n:'Nkk Le Vaar',c:'Quincy Clan',d:'Legendary · +30 Reiatsu +5 Posture',u:'/trello/?q=nkk'},
+  {n:'Valkyrie',c:'Quincy Clan',d:'Legendary · +10 HP +15 Reiatsu',u:'/trello/?q=valkyrie'},
+  {n:'Rampage',c:'Soul Reaper Power',d:'Legendary power (1% drop rate)',u:'/trello/?q=rampage'},
+  {n:'Flower',c:'Soul Reaper Power',d:'Legendary power (1% drop rate)',u:'/trello/?q=flower'},
+  {n:'Gravity',c:'Soul Reaper Power',d:'Legendary power (1% drop rate)',u:'/trello/?q=gravity'},
+  {n:'Lightning',c:'Soul Reaper Power',d:'Rare power (10% drop rate)',u:'/trello/?q=lightning'},
+  {n:'Blood',c:'Soul Reaper Power',d:'Rare power (10% drop rate)',u:'/trello/?q=blood'},
+  {n:'Shadow',c:'Soul Reaper Power',d:'Common power (89% drop rate)',u:'/trello/?q=shadow'},
+  {n:'Wind',c:'Soul Reaper Power',d:'Common power',u:'/trello/?q=wind'},
+  {n:'Fire',c:'Soul Reaper Power',d:'Common power',u:'/trello/?q=fire'},
+  {n:'Gunners',c:'Arrancar Power',d:'Legendary Hollow/Arrancar power (1%)',u:'/trello/?q=gunners'},
+  {n:'Bat',c:'Arrancar Power',d:'Legendary Arrancar power',u:'/trello/?q=bat'},
+  {n:'Divinity',c:'Arrancar Power',d:'Legendary Arrancar power',u:'/trello/?q=divinity'},
+  {n:'Panther',c:'Arrancar Power',d:'Rare Arrancar power',u:'/trello/?q=panther'},
+  {n:'Heaven',c:'Arrancar Power',d:'Common Arrancar power',u:'/trello/?q=heaven'},
+  {n:'Fear',c:'Quincy Power',d:'Legendary Quincy power',u:'/trello/?q=fear'},
+  {n:'Deathdealing',c:'Quincy Power',d:'Legendary Quincy power',u:'/trello/?q=deathdealing'},
+  {n:'Explode',c:'Quincy Power',d:'Rare Quincy power',u:'/trello/?q=explode'},
+  {n:'Power',c:'Quincy Power',d:'Common Quincy power',u:'/trello/?q=power'},
+  {n:'Heat',c:'Quincy Power',d:'Common Quincy power',u:'/trello/?q=heat'},
+  {n:'Wendigo',c:'Boss',d:'Boss Portal encounter',u:'/trello/?q=wendigo'},
+  {n:'Starrk (Boss)',c:'Boss',d:'First Espada · drops Wolf mask',u:'/trello/?q=starrk'},
+  {n:'Ulquiorra',c:'Boss',d:'Ranged Espada · drops Spear Helmet',u:'/trello/?q=ulquiorra'},
+  {n:'Grimmjow',c:'Boss',d:'Fist-based Espada · drops Crusher claws',u:'/trello/?q=grimmjow'},
+  {n:'Big Blud',c:'Boss',d:'Hueco Mundo primordial · drops Tiki mask',u:'/trello/?q=big blud'},
+  {n:'Hogyoku',c:'Item',d:'Crafted from 15 Shattered Hogyoku · required for Resurrection',u:'/trello/?q=hogyoku'},
+  {n:'Wipe Essence',c:'Item',d:'Resets race and progression · from codes or in-game',u:'/trello/?q=wipe essence'},
+  {n:'The Holy Grail',c:'Item',d:'Grants +3 extra skill points (cap 45)',u:'/trello/?q=holy grail'},
+  {n:'Skill Crystal',c:'Item',d:'Granted by Kisuke for breaking potential limits',u:'/trello/?q=skill crystal'},
+  {n:'Clan Reroll',c:'Item',d:'Reroll your clan roll · from codes or in-game',u:'/trello/?q=clan reroll'},
+  {n:'Ability Reroll',c:'Item',d:'Reroll one of your power slots · 1% Legendary',u:'/trello/?q=ability reroll'},
+  {n:'Shikai Obtainment',c:'Progression',d:'Unlock at 200 Potential · press N · 3-stage quest',u:'/trello/?q=shikai'},
+  {n:'Resurrection Obtainment',c:'Progression',d:'Unlock at 605 Potential · requires Hogyoku',u:'/trello/?q=resurrection'},
+  {n:'Schrift Obtainment',c:'Progression',d:'Unlock at 215 Potential · Quincy only',u:'/trello/?q=schrift'},
+  {n:'How to wipe character',c:'Guide',d:'Use Wipe Essence from inventory',u:'/trello/?q=wipe'},
+  {n:'Eternal Flame event',c:'Event',d:'50-wave PvE · loot at waves 10/20/30/40/50 · 6 modifiers',u:'/trello/?q=eternal flame'},
+  {n:'Missions',c:'Gameplay',d:'4 PvE types + Stalks PvP · main Potential source',u:'/trello/?q=missions'},
+  {n:'Redeem codes',c:'Action',d:'15 live codes · Gear icon → Code tab',u:'/codes/'},
+  {n:'Build Planner',c:'Tool',d:'Plan race · clan · power · share URL',u:'/tools/build-planner/'},
+  {n:'Tier List',c:'Page',d:'Ranked clans, powers, and races',u:'/tier-list/'},
+];
+
+const $q=document.getElementById('globalSearch');
+const $box=document.getElementById('suggestBox');
+let active=-1,results=[];
+
+function searchFilter(v){
+  const q=v.trim().toLowerCase();
+  if(!q)return[];
+  return INDEX.filter(x=>x.n.toLowerCase().includes(q)||x.d.toLowerCase().includes(q)||x.c.toLowerCase().includes(q)).slice(0,10);
+}
+function renderSuggest(){
+  if(results.length===0){$box.classList.remove('on');$box.innerHTML='';return;}
+  $box.innerHTML=results.map((r,i)=>`<a href="${r.u}" class="suggest-item${i===active?' active':''}"><div><div class="font-semibold">${r.n}</div><div class="text-xs muted">${r.d}</div></div><span class="cat">${r.c}</span></a>`).join('');
+  $box.classList.add('on');
+}
+$q.addEventListener('input',e=>{results=searchFilter(e.target.value);active=-1;renderSuggest();});
+$q.addEventListener('keydown',e=>{
+  if(e.key==='ArrowDown'){e.preventDefault();active=Math.min(active+1,results.length-1);renderSuggest();}
+  else if(e.key==='ArrowUp'){e.preventDefault();active=Math.max(active-1,0);renderSuggest();}
+  else if(e.key==='Enter'&&active>=0){e.preventDefault();location.href=results[active].u;}
+  else if(e.key==='Escape'){$box.classList.remove('on');$q.blur();}
+});
+document.addEventListener('click',e=>{if(!e.target.closest('.search-wrap'))$box.classList.remove('on');});
+$q.addEventListener('focus',()=>{if(results.length)$box.classList.add('on');});
+</script>
+</body>
+</html>

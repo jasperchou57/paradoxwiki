@@ -1,0 +1,27 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630">
+  <rect width="1200" height="630" fill="#0B0E13"/>
+  <rect x="40" y="40" width="1120" height="550" fill="none" stroke="#2B2D3C" stroke-width="2"/>
+
+  <text x="80" y="130" font-family="'JetBrains Mono',monospace" font-size="28" font-weight="700" fill="#5383E8">paradoxwiki.net</text>
+
+  <text x="80" y="240" font-family="Inter,sans-serif" font-size="66" font-weight="700" fill="#E8E8F0">Paradox Roblox Wiki</text>
+  <text x="80" y="300" font-family="Inter,sans-serif" font-size="34" font-weight="400" fill="#8B8E9E">A Bleach Game · Codes · Shikai · Clans · Builds</text>
+
+  <g transform="translate(80,380)">
+    <rect width="220" height="60" fill="#1A1C2C" stroke="#2B2D3C"/>
+    <text x="20" y="25" font-family="Inter,sans-serif" font-size="13" fill="#8B8E9E" text-transform="uppercase" letter-spacing="2">Live Codes</text>
+    <text x="20" y="48" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" fill="#32D296">15 active</text>
+  </g>
+  <g transform="translate(320,380)">
+    <rect width="220" height="60" fill="#1A1C2C" stroke="#2B2D3C"/>
+    <text x="20" y="25" font-family="Inter,sans-serif" font-size="13" fill="#8B8E9E" text-transform="uppercase" letter-spacing="2">Trello cards</text>
+    <text x="20" y="48" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" fill="#E8E8F0">345 mirrored</text>
+  </g>
+  <g transform="translate(560,380)">
+    <rect width="280" height="60" fill="#1A1C2C" stroke="#2B2D3C"/>
+    <text x="20" y="25" font-family="Inter,sans-serif" font-size="13" fill="#8B8E9E" text-transform="uppercase" letter-spacing="2">Build Planner</text>
+    <text x="20" y="48" font-family="'JetBrains Mono',monospace" font-size="22" font-weight="700" fill="#F1B51C">free · shareable</text>
+  </g>
+
+  <text x="80" y="540" font-family="Inter,sans-serif" font-size="20" fill="#8B8E9E">Verified from the official Paradox Trello · April 2026</text>
+</svg>

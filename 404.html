@@ -1,0 +1,61 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Page not found — Paradox Wiki</title>
+<meta name="robots" content="noindex,follow">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_TOKEN"}'></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0B0E13;--card:#1A1C2C;--line:#2B2D3C;--text:#E8E8F0;--mute:#8B8E9E;--blue:#5383E8;--red:#FF4655;}
+  html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:14px;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  .muted{color:var(--mute);}
+  .card{background:var(--card);border:1px solid var(--line);}
+  .btn{background:var(--blue);color:#fff;padding:10px 16px;font-weight:600;border-radius:4px;}
+  .btn-ghost{border:1px solid var(--line);padding:10px 14px;border-radius:4px;}
+  a{color:var(--text);}a:hover{color:var(--blue);}
+  .live-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #5a1f25;background:#2a0f12;color:var(--red);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+  .live-dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+</style>
+</head>
+<body>
+
+<header class="border-b" style="border-color:var(--line)">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="mono font-bold text-base">paradoxwiki<span style="color:var(--blue)">.net</span></a>
+    <nav class="flex items-center gap-1 text-sm">
+      <a href="/codes/" class="live-badge"><span class="live-dot"></span>15 Live Codes</a>
+      <a href="/trello/" class="btn-ghost">Trello</a>
+      <a href="/tier-list/" class="btn-ghost">Tier List</a>
+      <a href="/tools/build-planner/" class="btn-ghost">Build Planner</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-3xl mx-auto px-4 py-16">
+  <div class="mono muted text-sm mb-2">404 · page not found</div>
+  <h1 class="text-3xl font-bold mb-3">This page did not survive the wipe</h1>
+  <p class="muted text-base mb-8">The URL you tried does not exist on paradoxwiki.net. If you got here from a search result, the page may have been renamed. If you typed the URL, there is probably a typo.</p>
+
+  <div class="card p-5 mb-6">
+    <div class="text-xs uppercase muted tracking-wider mb-3">Popular destinations</div>
+    <div class="grid sm:grid-cols-2 gap-3">
+      <a href="/codes/" class="card p-3"><div class="font-semibold">15 live codes</div><div class="text-xs muted">Rerolls, Wipe Essence, Stat Resets</div></a>
+      <a href="/tier-list/" class="card p-3"><div class="font-semibold">Clan tier list</div><div class="text-xs muted">Aizen, Cifer, Yhwach and more</div></a>
+      <a href="/trello/" class="card p-3"><div class="font-semibold">Trello mirror</div><div class="text-xs muted">345 cards, searchable</div></a>
+      <a href="/tools/build-planner/" class="card p-3"><div class="font-semibold">Build Planner</div><div class="text-xs muted">Plan your race, clan, and power</div></a>
+    </div>
+  </div>
+
+  <a href="/" class="btn inline-block">← Back to homepage</a>
+</main>
+
+</body>
+</html>

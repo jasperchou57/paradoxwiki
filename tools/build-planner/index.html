@@ -1,0 +1,469 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Paradox Build Planner — Free Clan & Power Calculator</title>
+<meta name="description" content="Free Paradox Roblox build planner. Pick race, clan, power, stats. See HP, Reiatsu, Posture from real Trello data. Share builds via URL, no signup.">
+<link rel="canonical" href="https://paradoxwiki.net/tools/build-planner/">
+<meta name="robots" content="index,follow,max-image-preview:large">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Paradox Build Planner — Free Clan & Power Calculator">
+<meta property="og:description" content="Free Paradox Roblox build planner. Pick race, clan, power, stats. See HP, Reiatsu, Posture from real Trello data. Share builds via URL, no signup.">
+<meta property="og:url" content="https://paradoxwiki.net/tools/build-planner/">
+<meta property="og:image" content="https://paradoxwiki.net/og.png">
+<link rel="icon" href="/favicon.svg" type="image/svg+xml">
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js" data-cf-beacon='{"token":"REPLACE_WITH_CF_TOKEN"}'></script>
+<script src="https://cdn.tailwindcss.com"></script>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+  :root{--bg:#0B0E13;--card:#1A1C2C;--line:#2B2D3C;--text:#E8E8F0;--mute:#8B8E9E;--blue:#5383E8;--gold:#F1B51C;--red:#FF4655;--green:#32D296;}
+  html,body{background:var(--bg);color:var(--text);font-family:'Inter',system-ui,sans-serif;font-size:14px;}
+  .mono{font-family:'JetBrains Mono',ui-monospace,monospace;}
+  .card{background:var(--card);border:1px solid var(--line);}
+  .hline{border-color:var(--line);}
+  .muted{color:var(--mute);}
+  .btn{background:var(--blue);color:#fff;padding:10px 16px;font-weight:600;border-radius:4px;border:0;cursor:pointer;font-family:inherit;font-size:14px;}
+  .btn-ghost{border:1px solid var(--line);padding:8px 14px;border-radius:4px;background:transparent;color:var(--text);cursor:pointer;font-family:inherit;font-size:14px;}
+  .btn-ghost:hover{border-color:var(--blue);color:var(--blue);}
+  .tag{font-size:10px;padding:2px 8px;border:1px solid var(--line);border-radius:2px;letter-spacing:.04em;text-transform:uppercase;font-weight:600;}
+  .tag-leg{color:var(--gold);border-color:#5a4a1f;background:#2a220f;}
+  .tag-rare{color:var(--blue);border-color:#1f3a5a;background:#0f1a2e;}
+  .tag-com{color:var(--mute);border-color:var(--line);}
+  a{color:var(--text);}a:hover{color:var(--blue);}
+  table{width:100%;border-collapse:collapse;}
+  th,td{padding:10px 12px;text-align:left;border-bottom:1px solid var(--line);font-size:14px;}
+  th{font-size:11px;text-transform:uppercase;letter-spacing:.05em;color:var(--mute);font-weight:600;}
+  select,input{background:#0B0E13;border:1px solid var(--line);color:var(--text);padding:10px 12px;border-radius:4px;font-family:inherit;font-size:14px;width:100%;}
+  select:focus,input:focus{outline:none;border-color:var(--blue);}
+  details summary{cursor:pointer;padding:14px 0;border-bottom:1px solid var(--line);list-style:none;}
+  details summary::-webkit-details-marker{display:none;}
+  details summary::after{content:'+';float:right;color:var(--mute);}
+  details[open] summary::after{content:'−';}
+  .stat-big{font-family:'JetBrains Mono',monospace;font-size:28px;font-weight:700;line-height:1;}
+  .stat-lbl{font-size:10px;text-transform:uppercase;letter-spacing:.08em;color:var(--mute);margin-bottom:4px;}
+  .bar{height:6px;background:#0B0E13;border:1px solid var(--line);border-radius:2px;overflow:hidden;}
+  .bar>div{height:100%;background:var(--blue);transition:width .3s;}
+  .chip{display:inline-block;padding:6px 10px;border:1px solid var(--line);border-radius:2px;font-size:12px;cursor:pointer;margin:2px;text-transform:uppercase;letter-spacing:.04em;font-weight:600;}
+  .chip.on{border-color:var(--blue);color:var(--blue);background:#0f1a2e;}
+  .chip:hover{border-color:var(--blue);}
+  .suggest{padding:10px 12px;border-left:2px solid var(--gold);background:#1a170a;margin-bottom:8px;font-size:13px;}
+  .kbd{font-family:'JetBrains Mono',monospace;background:#0B0E13;border:1px solid var(--line);padding:2px 6px;border-radius:2px;font-size:12px;}
+  .live-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 10px;border:1px solid #5a1f25;background:#2a0f12;color:var(--red);border-radius:2px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;}
+  .live-dot{width:6px;height:6px;background:var(--red);border-radius:50%;animation:pulse 1.8s ease-in-out infinite;}
+  @keyframes pulse{0%,100%{opacity:1}50%{opacity:.35}}
+</style>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"SoftwareApplication",
+  "name":"Paradox Roblox Build Planner",
+  "applicationCategory":"GameApplication",
+  "operatingSystem":"Web",
+  "offers":{"@type":"Offer","price":"0","priceCurrency":"USD"},
+  "description":"Free build planner for Paradox Roblox (Bleach RPG). Pick race, clan, power, and stat allocation. See HP, Reiatsu, and Posture totals. Shareable build URLs.",
+  "url":"https://paradoxwiki.net/tools/build-planner/"
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"FAQPage",
+  "mainEntity":[
+    {"@type":"Question","name":"What does the Paradox Build Planner do?","acceptedAnswer":{"@type":"Answer","text":"It lets you pick race, clan, power, and stat investment for Paradox Roblox and shows the resulting HP, Reiatsu, and Posture totals. All stats come from the official Paradox Trello."}},
+    {"@type":"Question","name":"Is the Paradox Build Planner free?","acceptedAnswer":{"@type":"Answer","text":"Yes. No signup, no payment. Builds are saved in your browser and shareable via URL."}},
+    {"@type":"Question","name":"Where do the numbers come from?","acceptedAnswer":{"@type":"Answer","text":"Clan stat buffs are copied directly from the official Paradox Trello card for Soul Reaper Clans, Hollow Clans, and Quincy Clans. Power rarity reflects the Trello drop-rate tiers (Legendary 1%, Rare 10%, Common 89%)."}},
+    {"@type":"Question","name":"Can I save multiple builds?","acceptedAnswer":{"@type":"Answer","text":"Yes. Every build has a unique URL containing the full loadout. Bookmark or paste the URL anywhere to save or share the build."}}
+  ]
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context":"https://schema.org",
+  "@type":"BreadcrumbList",
+  "itemListElement":[
+    {"@type":"ListItem","position":1,"name":"Home","item":"https://paradoxwiki.net/"},
+    {"@type":"ListItem","position":2,"name":"Tools","item":"https://paradoxwiki.net/tools/"},
+    {"@type":"ListItem","position":3,"name":"Build Planner","item":"https://paradoxwiki.net/tools/build-planner/"}
+  ]
+}
+</script>
+</head>
+<body>
+
+<header class="border-b hline">
+  <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+    <a href="/" class="flex items-center gap-2"><span class="mono font-bold text-base tracking-tight">paradoxwiki<span style="color:var(--blue)">.net</span></span></a>
+    <nav class="flex items-center gap-1 text-sm">
+      <a href="/codes/" class="live-badge"><span class="live-dot"></span>15 Live Codes</a>
+      <a href="/trello/" class="btn-ghost">Trello</a>
+      <a href="/tier-list/" class="btn-ghost">Tier List</a>
+      <a href="/tools/build-planner/" class="btn-ghost" style="border-color:var(--blue);color:var(--blue)">Build Planner</a>
+    </nav>
+  </div>
+</header>
+
+<main class="max-w-6xl mx-auto px-4 py-6">
+
+  <nav class="text-xs muted mb-4"><a href="/">Home</a> <span>/</span> <a href="/tools/build-planner/">Tools</a> <span>/</span> <span>Build Planner</span></nav>
+
+  <section class="mb-4">
+    <h1 class="text-xl font-semibold">Paradox Roblox Build Planner</h1>
+    <p class="muted text-sm mt-1">Pick a race, clan, power, and stat allocation. See HP, Reiatsu, and Posture totals calculated from real Trello data. Share your build via URL. No signup.</p>
+  </section>
+
+  <section class="grid md:grid-cols-5 gap-4 mb-8">
+
+    <div class="md:col-span-3 card p-5">
+      <div class="flex items-center justify-between mb-4">
+        <span class="text-xs uppercase tracking-wider muted">Loadout</span>
+        <button class="btn-ghost text-xs" onclick="resetBuild()">Reset</button>
+      </div>
+
+      <div class="mb-4">
+        <label class="stat-lbl block">Race</label>
+        <div id="race-chips"></div>
+      </div>
+
+      <div class="mb-4">
+        <label class="stat-lbl block">Clan</label>
+        <select id="clan"></select>
+        <div class="text-xs muted mt-1" id="clan-desc"></div>
+      </div>
+
+      <div class="mb-4">
+        <label class="stat-lbl block">Power <span class="muted">(Shikai / Arrancar / Schrift)</span></label>
+        <select id="power"></select>
+        <div class="text-xs muted mt-1" id="power-desc"></div>
+      </div>
+
+      <div class="mb-4">
+        <label class="stat-lbl block">Primary Stat Focus</label>
+        <div id="stat-chips"></div>
+        <div class="text-xs muted mt-2">Stats unlock skills in their respective trees. Paradox does not give direct stat damage — stat allocation = skill pool.</div>
+      </div>
+
+      <div class="mb-2">
+        <label class="stat-lbl block">Potential Level</label>
+        <input type="range" id="potential" min="0" max="705" step="5" value="200">
+        <div class="flex justify-between text-xs muted mono"><span>0</span><span id="pot-val">200 · Shikai unlocked</span><span>705</span></div>
+      </div>
+    </div>
+
+    <div class="md:col-span-2 card p-5">
+      <div class="text-xs uppercase tracking-wider muted mb-3">Your Build</div>
+
+      <div class="grid grid-cols-3 gap-4 mb-5">
+        <div>
+          <div class="stat-lbl">HP</div>
+          <div class="stat-big" id="s-hp">0</div>
+        </div>
+        <div>
+          <div class="stat-lbl">Reiatsu</div>
+          <div class="stat-big" id="s-rei">0</div>
+        </div>
+        <div>
+          <div class="stat-lbl">Posture</div>
+          <div class="stat-big" id="s-pos">0</div>
+        </div>
+      </div>
+
+      <div class="mb-5">
+        <div class="flex justify-between mb-1">
+          <span class="stat-lbl">Build score vs meta ceiling</span>
+          <span class="mono text-xs font-semibold" id="opt-val">0%</span>
+        </div>
+        <div class="bar"><div id="opt-bar" style="width:0%"></div></div>
+      </div>
+
+      <div class="mb-5">
+        <div class="stat-lbl mb-1">Race passive</div>
+        <div class="text-xs" id="race-passive">—</div>
+      </div>
+
+      <div id="suggestions"></div>
+
+      <div class="mt-5 flex gap-2">
+        <button class="btn flex-1" onclick="shareBuild()">Share build</button>
+        <button class="btn-ghost" onclick="copyUrl()"><span id="copy-txt">Copy URL</span></button>
+      </div>
+      <p class="text-xs muted mt-2">Auto-saves in your browser. The URL contains the full loadout — paste it in Discord or on Reddit.</p>
+    </div>
+
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-base font-semibold mb-3">How the Paradox Build Planner Works</h2>
+    <div class="card p-5 text-sm leading-relaxed" style="color:#c8cad6">
+      <p class="mb-3">Every clan stat buff in this planner comes directly from the official Paradox Trello's Soul Reaper Clans, Hollow Clans, and Quincy Clans cards. For example, Aizen's buff "+10 HP, +10 Reiatsu, +5 Posture" is the exact text from the Trello — we do not add, average, or estimate. Common clans (Akagi, Vega, Accutrone, etc.) show zero buffs because the Trello explicitly states "Common Clans (No Buffs)" — if you roll one, consider a Clan Reroll.</p>
+      <p class="mb-3">Power rarity reflects the Trello drop-rate tiers published on the Soul-reaper Powers, Arrancar Powers, and Quincy Powers cards: Legendary powers drop at 1% per roll, Rare at 10%, Common at 89%. The planner does not currently model combat damage because the Trello does not publish raw damage formulas — powers are differentiated only by their tier. If the developer publishes per-power damage values in a future update, we will add a DPS column within 24 hours.</p>
+      <p class="mb-3">The <strong>Build Score</strong> compares your stat totals against the theoretical maximum for your race. A 100% build means you picked the stat-leader Legendary clan for your race and the highest-tier power available. Below 100% the planner surfaces specific swap suggestions that would raise your score the most — usually a single Clan Reroll matters more than several stat tree changes.</p>
+      <p class="mb-3">The <strong>Potential</strong> slider reflects the real progression gates published on the Trello: at 75 Potential you can take the Soul Reaper Exam, at 200 you unlock Shikai (by pressing <span class="kbd">N</span>), at 215 Quincies can begin the Schrift quest, at 605 Hollows can start the Resurrection quest, and at 705 you cap out. The slider's current state shows which gate you've passed — useful for confirming whether a build is actually reachable at your progression.</p>
+      <p>Unlike opinion-based tier lists, this planner uses only the developer's published data. If the Trello changes, the planner changes. If you see a discrepancy between the planner and the Trello, the Trello wins — please report it via the Discord link at the bottom of the page.</p>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-base font-semibold mb-3">Meta Clan + Power Combos</h2>
+    <div class="card overflow-hidden">
+      <table>
+        <thead><tr><th>Race</th><th>Clan</th><th>Power</th><th>Stat total</th><th></th></tr></thead>
+        <tbody class="mono">
+          <tr><td>Soul Reaper</td><td class="font-semibold">Aizen</td><td>Rampage <span class="tag tag-leg">Legendary</span></td><td>25</td><td><a href="?r=SoulReaper&c=Aizen&p=Rampage" style="color:var(--blue)">Load →</a></td></tr>
+          <tr><td>Soul Reaper</td><td class="font-semibold">Yamamoto</td><td>Flower <span class="tag tag-leg">Legendary</span></td><td>30</td><td><a href="?r=SoulReaper&c=Yamamoto&p=Flower" style="color:var(--blue)">Load →</a></td></tr>
+          <tr><td>Hollow</td><td class="font-semibold">Cifer</td><td>Bat <span class="tag tag-leg">Legendary</span></td><td>24</td><td><a href="?r=Hollow&c=Cifer&p=Bat" style="color:var(--blue)">Load →</a></td></tr>
+          <tr><td>Hollow</td><td class="font-semibold">Louisenbairn</td><td>Divinity <span class="tag tag-leg">Legendary</span></td><td>29</td><td><a href="?r=Hollow&c=Louisenbairn&p=Divinity" style="color:var(--blue)">Load →</a></td></tr>
+          <tr><td>Quincy</td><td class="font-semibold">Yhwach</td><td>Fear <span class="tag tag-leg">Legendary</span></td><td>30</td><td><a href="?r=Quincy&c=Yhwach&p=Fear" style="color:var(--blue)">Load →</a></td></tr>
+          <tr><td>Quincy</td><td class="font-semibold">Nkk Le Vaar</td><td>Deathdealing <span class="tag tag-leg">Legendary</span></td><td>35</td><td><a href="?r=Quincy&c=NkkLeVaar&p=Deathdealing" style="color:var(--blue)">Load →</a></td></tr>
+        </tbody>
+      </table>
+    </div>
+  </section>
+
+  <section class="mb-8">
+    <h2 class="text-base font-semibold mb-3">Frequently Asked Questions</h2>
+    <div class="card p-5">
+      <details><summary class="font-semibold">What does the Paradox Build Planner do?</summary><p class="py-3 muted text-sm">It lets you pick race, clan, power, and stat investment and shows HP, Reiatsu, and Posture totals from real Trello data. You can share the build via URL.</p></details>
+      <details><summary class="font-semibold">Is it free? Do I need to sign up?</summary><p class="py-3 muted text-sm">Free, no signup. There are no ads on the planner and no email capture. Build state is stored locally in your browser.</p></details>
+      <details><summary class="font-semibold">Where do the numbers come from?</summary><p class="py-3 muted text-sm">Directly from the official Paradox Trello — Soul Reaper Clans, Hollow Clans, Quincy Clans, and the three Power cards. We do not estimate.</p></details>
+      <details><summary class="font-semibold">Why isn't there a DPS number?</summary><p class="py-3 muted text-sm">The Trello does not publish raw damage formulas — only clan stat buffs and power rarities. We will not invent numbers. When the developer publishes damage values, we will add a DPS column within 24 hours.</p></details>
+      <details><summary class="font-semibold">Can I share a build with my friends?</summary><p class="py-3 muted text-sm">Yes. Click Share build. The URL encodes your complete loadout. Paste it anywhere (Discord, Reddit, YouTube descriptions) and the recipient sees the same build.</p></details>
+    </div>
+  </section>
+
+</main>
+
+<footer class="border-t hline mt-12">
+  <div class="max-w-6xl mx-auto px-4 py-6 flex flex-wrap items-center justify-between gap-3 text-xs muted">
+    <div>paradoxwiki.net · community project · not affiliated with a bleach game or Roblox Corporation.</div>
+    <div class="flex gap-4"><a href="https://discord.gg/ableachgame">Official Discord</a><a href="/codes/">Codes</a><a href="/trello/">Trello</a><a href="/tier-list/">Tier List</a></div>
+  </div>
+</footer>
+
+<script>
+const DATA={
+  races:[
+    {id:'SoulReaper',name:'Soul Reaper',passive:'Earliest Shikai unlock (200 Potential). Vizard → Bankai ceiling.'},
+    {id:'Hollow',name:'Hollow / Arrancar',passive:'Evolution chain: Fishbone → Menos → Adjuchas → Vasto Lorde → Arrancar. Resurrection unlocks at 605 Potential via the Hogyoku quest.'},
+    {id:'Quincy',name:'Quincy',passive:'Blut Stats: 15% Damage Reduction (race-wide passive). Schrift unlocks at 215 Potential, Voltstanding is the late-game ceiling.'}
+  ],
+  clans:{
+    SoulReaper:[
+      {id:'Aizen',tier:'L',hp:10,r:10,p:5,d:'+10 HP +10 Reiatsu +5 Posture · balanced S-tier'},
+      {id:'Kurosaki',tier:'L',hp:0,r:20,p:5,d:'+20 Reiatsu +5 Posture · Kido monster'},
+      {id:'Unohana',tier:'L',hp:15,r:0,p:5,d:'+15 HP +5 Posture · tank build'},
+      {id:'Yamamoto',tier:'L',hp:15,r:15,p:0,d:'+15 HP +15 Reiatsu · highest balance'},
+      {id:'Zaraki',tier:'L',hp:10,r:0,p:5,d:'+10 HP +5 Posture'},
+      {id:'Ichimaru',tier:'R',hp:7,r:0,p:1,d:'+7 HP +1 Posture'},
+      {id:'Hirako',tier:'R',hp:0,r:5,p:0,d:'+5 Reiatsu'},
+      {id:'Urahara',tier:'R',hp:0,r:8,p:0,d:'+8 Reiatsu'},
+      {id:'Kuchiki',tier:'R',hp:5,r:0,p:0,d:'+5 HP'},
+      {id:'Komamura',tier:'R',hp:0,r:0,p:3,d:'+3 Posture'},
+      {id:'Akagi',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'},
+      {id:'Suzuki',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'},
+      {id:'Nakamura',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'}
+    ],
+    Hollow:[
+      {id:'Cifer',tier:'L',hp:10,r:10,p:4,d:'+10 HP +10 Reiatsu +4 Posture · balanced S-tier'},
+      {id:'Louisenbairn',tier:'L',hp:9,r:17,p:3,d:'+9 HP +17 Reiatsu +3 Posture · highest total'},
+      {id:'Jaegerjaquez',tier:'L',hp:15,r:0,p:5,d:'+15 HP +5 Posture'},
+      {id:'Halibel',tier:'L',hp:15,r:0,p:8,d:'+15 HP +8 Posture · posture king'},
+      {id:'Starrk',tier:'L',hp:0,r:20,p:3,d:'+20 Reiatsu +3 Posture · also a boss drop'},
+      {id:'Odelschwanck',tier:'R',hp:10,r:0,p:0,d:'+10 HP'},
+      {id:'Chelute',tier:'R',hp:10,r:0,p:0,d:'+10 HP'},
+      {id:'Granz',tier:'R',hp:0,r:8,p:0,d:'+8 Reiatsu'},
+      {id:'Gilga',tier:'R',hp:4,r:0,p:2,d:'+4 HP +2 Posture'},
+      {id:'Llargo',tier:'R',hp:0,r:0,p:4,d:'+4 Posture'},
+      {id:'Vega',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'},
+      {id:'Navarro',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'}
+    ],
+    Quincy:[
+      {id:'Yhwach',tier:'L',hp:20,r:10,p:0,d:'+20 HP +10 Reiatsu · highest raw HP in game'},
+      {id:'Ishida',tier:'L',hp:15,r:5,p:5,d:'+15 HP +5 Posture +5 Reiatsu'},
+      {id:'Haschwalth',tier:'L',hp:15,r:0,p:10,d:'+15 HP +10 Posture'},
+      {id:'NkkLeVaar',tier:'L',hp:0,r:30,p:5,d:'+30 Reiatsu +5 Posture · highest single-stat buff'},
+      {id:'Valkyrie',tier:'L',hp:10,r:15,p:0,d:'+10 HP +15 Reiatsu'},
+      {id:'Du',tier:'R',hp:5,r:0,p:0,d:'+5 HP'},
+      {id:'Parnkgjas',tier:'R',hp:10,r:0,p:0,d:'+10 HP'},
+      {id:'Basterbine',tier:'R',hp:0,r:10,p:0,d:'+10 Reiatsu'},
+      {id:'Nodt',tier:'R',hp:0,r:0,p:15,d:'+15 Posture'},
+      {id:'Waccabrada',tier:'R',hp:0,r:5,p:5,d:'+5 Posture +5 Reiatsu'},
+      {id:'Accutrone',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'},
+      {id:'Domino',tier:'C',hp:0,r:0,p:0,d:'Common · no buffs · reroll this'}
+    ]
+  },
+  powers:{
+    SoulReaper:[
+      {id:'Rampage',tier:'L',d:'Legendary (1% drop rate)'},
+      {id:'Flower',tier:'L',d:'Legendary (1% drop rate)'},
+      {id:'Gravity',tier:'L',d:'Legendary (1% drop rate)'},
+      {id:'Lightning',tier:'R',d:'Rare (10% drop rate)'},
+      {id:'Blood',tier:'R',d:'Rare (10% drop rate)'},
+      {id:'Shadow',tier:'C',d:'Common (89% drop rate)'},
+      {id:'Wind',tier:'C',d:'Common (89% drop rate)'},
+      {id:'Fire',tier:'C',d:'Common (89% drop rate)'}
+    ],
+    Hollow:[
+      {id:'Gunners',tier:'L',d:'Legendary Arrancar power (1%)'},
+      {id:'Bat',tier:'L',d:'Legendary Arrancar power (1%)'},
+      {id:'Divinity',tier:'L',d:'Legendary Arrancar power (1%)'},
+      {id:'Panther',tier:'R',d:'Rare Arrancar power (10%)'},
+      {id:'Heaven',tier:'C',d:'Common Arrancar power (89%)'}
+    ],
+    Quincy:[
+      {id:'Fear',tier:'L',d:'Legendary Quincy power (1%)'},
+      {id:'Deathdealing',tier:'L',d:'Legendary Quincy power (1%)'},
+      {id:'Explode',tier:'R',d:'Rare Quincy power (10%)'},
+      {id:'Power',tier:'C',d:'Common Quincy power (89%)'},
+      {id:'Heat',tier:'C',d:'Common Quincy power (89%)'}
+    ]
+  },
+  stats:['Hakuda','Kido','Speed','Sword']
+};
+
+const TIER_W={L:100,R:40,C:10};
+const TIER_NAME={L:'Legendary',R:'Rare',C:'Common'};
+const BEST={SoulReaper:{c:'Yamamoto',p:'Rampage'},Hollow:{c:'Louisenbairn',p:'Divinity'},Quincy:{c:'NkkLeVaar',p:'Fear'}};
+const POT_GATES=[
+  {at:0,label:'Starting'},
+  {at:75,label:'Exam (Soul Reaper)'},
+  {at:125,label:'First skill crystal boss'},
+  {at:200,label:'Shikai unlocked'},
+  {at:215,label:'Schrift (Quincy)'},
+  {at:605,label:'Resurrection (Hollow)'},
+  {at:705,label:'Potential cap'}
+];
+
+const state={race:'SoulReaper',clan:'Aizen',power:'Rampage',stat:'Sword',potential:200};
+
+function loadFromUrl(){
+  const q=new URLSearchParams(location.search);
+  if(q.has('r')||q.has('c')){
+    state.race=q.get('r')||state.race;
+    state.clan=q.get('c')||state.clan;
+    state.power=q.get('p')||state.power;
+    state.stat=q.get('s')||state.stat;
+    state.potential=+(q.get('l')||state.potential);
+    return true;
+  }
+  const saved=localStorage.getItem('paradox_build');
+  if(saved){try{Object.assign(state,JSON.parse(saved));}catch(e){}}
+}
+function save(){localStorage.setItem('paradox_build',JSON.stringify(state));}
+function urlFor(s){return location.pathname+'?'+new URLSearchParams({r:s.race,c:s.clan,p:s.power,s:s.stat,l:s.potential}).toString();}
+
+function findClan(r,id){return (DATA.clans[r]||[]).find(c=>c.id===id);}
+function findPower(r,id){return (DATA.powers[r]||[]).find(p=>p.id===id);}
+
+function renderRaceChips(){
+  const el=document.getElementById('race-chips');
+  el.innerHTML=DATA.races.map(r=>`<span class="chip ${r.id===state.race?'on':''}" data-r="${r.id}">${r.name}</span>`).join('');
+  el.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{
+    state.race=c.dataset.r;
+    state.clan=DATA.clans[state.race][0].id;
+    state.power=DATA.powers[state.race][0].id;
+    render();
+  });
+}
+function renderStatChips(){
+  const el=document.getElementById('stat-chips');
+  el.innerHTML=DATA.stats.map(s=>`<span class="chip ${s===state.stat?'on':''}" data-s="${s}">${s}</span>`).join('');
+  el.querySelectorAll('.chip').forEach(c=>c.onclick=()=>{state.stat=c.dataset.s;render();});
+}
+function renderSelects(){
+  const cs=document.getElementById('clan');
+  cs.innerHTML=DATA.clans[state.race].map(c=>`<option value="${c.id}"${c.id===state.clan?' selected':''}>${c.id} — ${TIER_NAME[c.tier]}</option>`).join('');
+  cs.onchange=e=>{state.clan=e.target.value;render();};
+  const ps=document.getElementById('power');
+  ps.innerHTML=DATA.powers[state.race].map(p=>`<option value="${p.id}"${p.id===state.power?' selected':''}>${p.id} — ${TIER_NAME[p.tier]}</option>`).join('');
+  ps.onchange=e=>{state.power=e.target.value;render();};
+  const cd=findClan(state.race,state.clan);
+  document.getElementById('clan-desc').textContent=cd?cd.d:'';
+  const pw=findPower(state.race,state.power);
+  document.getElementById('power-desc').textContent=pw?pw.d:'';
+  document.getElementById('potential').value=state.potential;
+  const gate=POT_GATES.slice().reverse().find(g=>state.potential>=g.at)||POT_GATES[0];
+  document.getElementById('pot-val').textContent=`${state.potential} · ${gate.label}`;
+  document.getElementById('potential').oninput=e=>{state.potential=+e.target.value;render();};
+}
+
+function calc(){
+  const c=findClan(state.race,state.clan)||{hp:0,r:0,p:0};
+  const raceHpBase={SoulReaper:100,Hollow:100,Quincy:100}[state.race];
+  return{hp:raceHpBase+c.hp,rei:50+c.r,pos:20+c.p};
+}
+function score(){
+  const c=findClan(state.race,state.clan)||{tier:'C',hp:0,r:0,p:0};
+  const p=findPower(state.race,state.power)||{tier:'C'};
+  const best=BEST[state.race];
+  const bc=findClan(state.race,best.c);
+  const bp=findPower(state.race,best.p);
+  const bestTotal=(bc.hp+bc.r+bc.p)+TIER_W[bp.tier];
+  const mine=(c.hp+c.r+c.p)+TIER_W[p.tier];
+  return Math.round(Math.min(100,mine/bestTotal*100));
+}
+function suggestions(){
+  const out=[];
+  const c=findClan(state.race,state.clan);
+  const p=findPower(state.race,state.power);
+  const best=BEST[state.race];
+  if(c.tier!=='L'){
+    out.push(`Reroll clan → <strong>${best.c}</strong> (Legendary). Your current ${TIER_NAME[c.tier]} clan is a core stat loss. Use a Clan Reroll from <span class="mono">paradoxisout</span>.`);
+  }else if(state.clan!==best.c){
+    out.push(`For maximum raw stats, try <strong>${best.c}</strong> — the highest stat-total Legendary clan for ${state.race}.`);
+  }
+  if(p.tier!=='L'){
+    out.push(`Reroll power → hunt a <strong>Legendary</strong> power (${best.p} or similar). 30 Ability Rerolls from <span class="mono">Iblamethetesters</span> give a ~26% chance.`);
+  }
+  if(state.potential<200&&state.race==='SoulReaper')out.push(`Reach <strong>200 Potential</strong> to unlock Shikai. You are ${200-state.potential} Potential away.`);
+  if(state.potential<215&&state.race==='Quincy')out.push(`Reach <strong>215 Potential</strong> to start the Schrift quest.`);
+  if(state.potential<605&&state.race==='Hollow')out.push(`Reach <strong>605 Potential</strong> to begin Resurrection progression (requires Hogyoku).`);
+  return out.slice(0,3);
+}
+
+function render(){
+  renderRaceChips();
+  renderStatChips();
+  renderSelects();
+  const{hp,rei,pos}=calc();
+  document.getElementById('s-hp').textContent=hp;
+  document.getElementById('s-rei').textContent=rei;
+  document.getElementById('s-pos').textContent=pos;
+  const s=score();
+  document.getElementById('opt-val').textContent=s+'%';
+  document.getElementById('opt-bar').style.width=s+'%';
+  const race=DATA.races.find(r=>r.id===state.race);
+  document.getElementById('race-passive').textContent=race?race.passive:'';
+  const sugs=suggestions();
+  const su=document.getElementById('suggestions');
+  if(sugs.length===0){
+    su.innerHTML='<div class="suggest" style="border-left-color:var(--green);background:#0f2a20">Your build is at the meta ceiling for this race. Share it.</div>';
+  }else{
+    su.innerHTML=sugs.map(x=>`<div class="suggest">${x}</div>`).join('');
+  }
+  history.replaceState(null,'',urlFor(state));
+  save();
+}
+
+function resetBuild(){
+  Object.assign(state,{race:'SoulReaper',clan:'Aizen',power:'Rampage',stat:'Sword',potential:200});
+  render();
+}
+function shareBuild(){
+  const url=location.origin+urlFor(state);
+  if(navigator.share){navigator.share({title:'My Paradox Build',url}).catch(()=>{});}
+  else{navigator.clipboard.writeText(url);alert('Build URL copied to clipboard');}
+}
+function copyUrl(){
+  navigator.clipboard.writeText(location.origin+urlFor(state));
+  const t=document.getElementById('copy-txt');t.textContent='Copied';
+  setTimeout(()=>t.textContent='Copy URL',1400);
+}
+
+loadFromUrl();
+render();
+</script>
+</body>
+</html>

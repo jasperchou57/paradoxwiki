@@ -1,0 +1,149 @@
+[
+  {
+    "slug": "paradox-game-cover",
+    "file": "paradox-game-cover.webp",
+    "w": 512,
+    "h": 512,
+    "alt": "Paradox Roblox Bleach game cover art",
+    "src": "trello",
+    "card": "Paradox"
+  },
+  {
+    "slug": "shikai-obtainment-stage-1",
+    "file": "shikai-obtainment-stage-1.webp",
+    "w": 600,
+    "h": 362,
+    "alt": "Paradox Shikai Obtainment quest Stage 1 key sequence",
+    "src": "trello",
+    "card": "Shikai Obtainment"
+  },
+  {
+    "slug": "shikai-obtainment-stage-2",
+    "file": "shikai-obtainment-stage-2.webp",
+    "w": 482,
+    "h": 385,
+    "alt": "Paradox Shikai Obtainment Stage 2 circle rhythm challenge",
+    "src": "trello",
+    "card": "Shikai Obtainment"
+  },
+  {
+    "slug": "shikai-obtainment-stage-3",
+    "file": "shikai-obtainment-stage-3.webp",
+    "w": 600,
+    "h": 362,
+    "alt": "Paradox Shikai Obtainment Stage 3 boss fight",
+    "src": "trello",
+    "card": "Shikai Obtainment"
+  },
+  {
+    "slug": "soul-reaper-progression",
+    "file": "soul-reaper-progression.webp",
+    "w": 600,
+    "h": 327,
+    "alt": "Paradox Soul Reaper progression path from Soul Society to Bankai",
+    "src": "trello",
+    "card": "Soul Reaper Progression"
+  },
+  {
+    "slug": "hollow-progression",
+    "file": "hollow-progression.webp",
+    "w": 611,
+    "h": 470,
+    "alt": "Paradox Hollow progression from Fishbone to Vastocar and Arrancar",
+    "src": "trello",
+    "card": "Hollow Progression"
+  },
+  {
+    "slug": "quincy-progression",
+    "file": "quincy-progression.webp",
+    "w": 433,
+    "h": 368,
+    "alt": "Paradox Quincy progression through Schrift and Voltstanding",
+    "src": "trello",
+    "card": "Quincy Progression"
+  },
+  {
+    "slug": "paradox-missions",
+    "file": "paradox-missions.webp",
+    "w": 600,
+    "h": 292,
+    "alt": "Paradox missions screen with Exterminate Rescue Scavenger and Protect objectives",
+    "src": "trello",
+    "card": "Missions"
+  },
+  {
+    "slug": "eternal-flame-event",
+    "file": "eternal-flame-event.webp",
+    "w": 260,
+    "h": 323,
+    "alt": "Paradox Eternal Flame 50 wave event",
+    "src": "trello",
+    "card": "Eternal Flame"
+  },
+  {
+    "slug": "youtube-hollow-progression-mimoblox",
+    "file": "youtube-hollow-progression-mimoblox.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "MimoBlox Paradox Hollow Progression Guide thumbnail",
+    "src": "youtube",
+    "video_id": "hJhJj4fjEPc",
+    "title": "FULL Hollow Progression Guide",
+    "channel": "MimoBlox"
+  },
+  {
+    "slug": "youtube-soul-reaper-bankai-catt",
+    "file": "youtube-soul-reaper-bankai-catt.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "Catt Paradox Soul Reaper to Bankai Guide thumbnail",
+    "src": "youtube",
+    "video_id": "PooWQP-4I4o",
+    "title": "Level 1 to Bankai Soul Reaper Guide",
+    "channel": "Catt"
+  },
+  {
+    "slug": "youtube-zaraki-bankai-breazsy",
+    "file": "youtube-zaraki-bankai-breazsy.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "Breazsy Paradox Kenpachi Zaraki Bankai guide thumbnail",
+    "src": "youtube",
+    "video_id": "H0gybB1oUsU",
+    "title": "Noob to Bankai Kenpachi Zaraki",
+    "channel": "Breazsy"
+  },
+  {
+    "slug": "youtube-starrk-resurrection-breazsy",
+    "file": "youtube-starrk-resurrection-breazsy.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "Breazsy Paradox Coyote Starrk Full Resurrection guide thumbnail",
+    "src": "youtube",
+    "video_id": "_nfy9lLYfHA",
+    "title": "Noob to Full Resurrection Starrk",
+    "channel": "Breazsy"
+  },
+  {
+    "slug": "youtube-paradox-peak-hw5567",
+    "file": "youtube-paradox-peak-hw5567.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "HW5567 Paradox Roblox Bleach game review thumbnail",
+    "src": "youtube",
+    "video_id": "vxyLIC0AQig",
+    "title": "This Roblox Bleach Game Might Be Peak",
+    "channel": "HW5567"
+  },
+  {
+    "slug": "youtube-beginner-guide-liftedtio",
+    "file": "youtube-beginner-guide-liftedtio.webp",
+    "w": 480,
+    "h": 360,
+    "alt": "LiftedTIO Paradox beginner guide thumbnail",
+    "src": "youtube",
+    "video_id": "zdcsLkXQUh0",
+    "title": "Updated Beginner Guide Roblox Paradox",
+    "channel": "LiftedTIO"
+  }
+]
